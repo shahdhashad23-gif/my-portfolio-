@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahd Zaki | Web Developer & IS Student</title>
+    
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+            --text-primary: #ffffff; /* الخط الأساسي أبيض ناصع تماماً */
+            --text-muted: #e2e8f0;    /* النصوص الفرعية أبيض فاتح جداً وواضح */
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--text-primary) !important;
+        }
+
+        .nav-link {
+            color: var(--text-muted) !important;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 130px 0 90px;
+        }
+
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+        }
+
+        .brand-name {
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        /* Section Titles */
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 0;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .custom-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            height: 100%;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        /* Skills Badges */
+        .skill-tag {
+            background-color: rgba(56, 189, 248, 0.15);
+            color: var(--accent-color);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 4px;
+            font-weight: 600;
+        }
+
+        /* Progress Bars */
+        .progress {
+            background-color: var(--border-color);
+            height: 10px;
+            border-radius: 10px;
+        }
+
+        .progress-bar {
+            background-color: var(--accent-color);
+            border-radius: 10px;
+        }
+
+        /* Buttons */
+        .btn-custom-primary {
+            background-color: var(--accent-color);
+            color: #0f172a;
+            font-weight: 700;
+            border-radius: 10px;
+            padding: 10px 24px;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-custom-primary:hover {
+            background-color: var(--accent-hover);
+            color: #ffffff;
+        }
+
+        .btn-custom-outline {
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            font-weight: 600;
+            border-radius: 10px;
+            padding: 10px 24px;
+            background: transparent;
+            transition: all 0.2s ease;
+        }
+
+        .btn-custom-outline:hover {
+            background-color: var(--border-color);
+            color: #ffffff;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            background-color: #0b1120;
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="#">Shahd Zaki</a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-3 text-center my-3 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">عنّي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">المهارات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">المشاريع</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">التواصل</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="container">
+            <div class="mb-4">
+                <!-- استبدلي profile.jpg باسم ملف صورتكِ الشخصية -->
+                <img src="profile.jpg" alt="Shahd Zaki" class="profile-img">
+            </div>
+            <h1 class="display-5 fw-bold mb-3 text-white">أهلاً، أنا <span class="brand-name">Shahd Zaki</span></h1>
+            <p class="fs-5 text-white mb-4 mx-auto" style="max-width: 650px;">
+                طالبة نظم معلومات (Information Systems) شغوفة بتطوير واجهات المستخدم وبناء تجارب ويب تجمع بين جمال التصميم وقوة الأداء.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#projects" class="btn btn-custom-primary">استكشف أعمالي</a>
+                <a href="#contact" class="btn btn-custom-outline">تواصل معي</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="section-header">
+                <h2>نبذة عني</h2>
+            </div>
+            <div class="custom-card">
+                <p class="fs-6 text-white mb-0">
+                    أدرس حالياً نظم المعلومات وأركز على تطوير واجهات المتاجر والمواقع الإلكترونية بأحدث التقنيات. أمتلك خلفية ممتازة في تحليل النظم وهندسة البرمجيات، وأسعى دائماً لتحويل الأفكار والحلول البرمجية إلى تطبيقات واجهات تفاعلية وسلسة للمستخدم.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="section-header">
+                <h2>المهارات والتقنيات</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="custom-card">
+                        <h5 class="fw-bold mb-4 text-white"><i class="fas fa-code text-info me-2"></i> تطوير الواجهات (Frontend)</h5>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1 text-white fw-semibold">
+                                <span>HTML5 & CSS3</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1 text-white fw-semibold">
+                                <span>Bootstrap 5 Framework</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1 text-white fw-semibold">
+                                <span>JavaScript Basics</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="custom-card">
+                        <h5 class="fw-bold mb-4 text-white"><i class="fas fa-tools text-info me-2"></i> الأدوات والمفاهيم</h5>
+                        <p class="text-white fs-6 mb-3">تقنيات وأدوات أستخدمها في تطوير المشاريع وتحليل النظم:</p>
+                        <div>
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">Responsive Web Design</span>
+                            <span class="skill-tag">Systems Analysis</span>
+                            <span class="skill-tag">SQL & Databases</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">UI Patterns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="section-header">
+                <h2>سابقة الأعمال</h2>
+            </div>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="custom-card d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <i class="far fa-folder-open fs-3 text-info"></i>
+                                <a href="#" class="text-white fs-5"><i class="fab fa-github"></i></a>
+                            </div>
+                            <h5 class="fw-bold mb-2 text-white">Personal Portfolio</h5>
+                            <p class="text-white fs-6">موقع سيرة ذاتية ومعرض أعمال شخصي بتصميم عالي التجاوب باستخدام Bootstrap 5 و Modern CSS.</p>
+                        </div>
+                        <div class="mt-3">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="custom-card d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <i class="far fa-folder-open fs-3 text-info"></i>
+                                <a href="#" class="text-white fs-5"><i class="fab fa-github"></i></a>
+                            </div>
+                            <h5 class="fw-bold mb-2 text-white">System Analysis Model</h5>
+                            <p class="text-white fs-6">مشروع تحليل ومخطط متكامل لنظام إدارة قواعد بيانات أكاديمي يهدف لتنظيم البيانات.</p>
+                        </div>
+                        <div class="mt-3">
+                            <span class="skill-tag">Database</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Systems Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="custom-card d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <i class="far fa-folder-open fs-3 text-info"></i>
+                                <a href="#" class="text-white fs-5"><i class="fab fa-github"></i></a>
+                            </div>
+                            <h5 class="fw-bold mb-2 text-white">Landing Page Design</h5>
+                            <p class="text-white fs-6">تصميم واجهة متجاوبة لتطبيق هاتف مع مراعاة تجربة المستخدم والألوان الجذابة.</p>
+                        </div>
+                        <div class="mt-3">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">Flexbox</span>
+                            <span class="skill-tag">UI Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>تواصل معي</h2>
+            </div>
+            <div class="custom-card py-5 mx-auto" style="max-width: 700px;">
+                <p class="fs-5 text-white mb-4">أنا دائماً منفتحة للفرص الجديدة والتواصل المهني، يسعدني تواصلك معي!</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="https://github.com" target="_blank" class="btn btn-custom-outline"><i class="fab fa-github me-2"></i> GitHub</a>
+                    <a href="https://linkedin.com" target="_blank" class="btn btn-custom-outline"><i class="fab fa-linkedin me-2"></i> LinkedIn</a>
+                    <a href="mailto:shahd@example.com" class="btn btn-custom-primary"><i class="fas fa-envelope me-2"></i> راسلني عبر البريد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center fs-6">
+        <div class="container">
+            <p class="mb-0 text-white">&copy; 2026 Developed with <i class="fas fa-heart text-danger"></i> by <span class="fw-bold">Shahd Zaki</span></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
